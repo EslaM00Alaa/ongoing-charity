@@ -79,6 +79,16 @@ const Prayertimes = () => {
           className="text-lg lg:text-4xl">احرص على أداء الصلاة في وقتها فهي عمود الدين وأعظم القربات</motion.p>
           
         </div>
+        <motion.p
+        variants={fadeIn("up", 0.7)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="text-lg lg:text-4xl"
+      >
+        {`موقعك الحالي: ${city}`}
+      </motion.p>
+
       </div>
 
       {/* Prayer Times Cards */}
