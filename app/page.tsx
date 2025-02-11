@@ -36,7 +36,7 @@ const Home: React.FC = () => {
               variants={fadeIn("up", 0.2)}
               initial="hidden"
               animate="show"
-              className="text-4xl md:text-7xl font-bold mb-6 md:mb-12 leading-[1.6]"
+              className="text-2xl md:text-7xl font-bold mb-6 md:mb-12 leading-[1.6]"
             >
               صدقة جارية عن روح المرحوم محمد صلاح بكر
             </motion.h1>
@@ -44,7 +44,7 @@ const Home: React.FC = () => {
               variants={fadeIn("up", 0.6)}
               initial="hidden"
               animate="show"
-              className="text-xl md:text-3xl leading-[1.6]"
+              className="text-lg md:text-3xl leading-[1.6]"
             >
               اللهم اجعل هذا العمل في ميزان حسناته، ونورًا له في قبره، واغفر له
               ولجميع أموات المسلمين.

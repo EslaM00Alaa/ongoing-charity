@@ -15,13 +15,13 @@ const Service = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="text-6xl font-bold text-[#518676]">خدماتنا</motion.h1>
+        className="text-4xl lg:text-6xl font-bold text-[#518676]">خدماتنا</motion.h1>
         <motion.p
          variants={fadeIn("up", 0.5)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="text-3xl w-11/12 lg:w-4/12 mx-auto font-semibold text-gray-500 mt-4">
+        className="text-xl w-11/12 lg:w-4/12 mx-auto font-semibold text-gray-500 mt-4">
           نسعى دائمًا لتيسير حياتك الروحية، فجمعنا لك الأذكار، الأحاديث النبوية وآيات القرآن الكريم لتكون في متناول يدك.
         </motion.p>
       </div>

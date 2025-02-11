@@ -65,7 +65,9 @@
     padding: 8px 0;
     border-bottom: 1px solid #ccc;
   }
-  
+  .mobileLink:last-child {
+    border-bottom: none;
+  } 
   .mobileLink:hover {
     color: #52867a;
   }

@@ -83,13 +83,13 @@ const Prayertimes: React.FC = () => {
         className="absolute z-20 text-white w-full px-4 lg:px-0 text-center"
         style={{ direction: "rtl" }}
       >
-        <div className="mt-32 lg:mt-64">
+        <div className="mt-12 lg:mt-64">
           <motion.h1
             variants={fadeIn("up", 0.2)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="text-4xl lg:text-7xl font-bold mb-4"
+            className="text-2xl lg:text-7xl font-bold mb-4"
           >
             مواقيت الصلاة
           </motion.h1>
@@ -103,15 +103,7 @@ const Prayertimes: React.FC = () => {
             احرص على أداء الصلاة في وقتها فهي عمود الدين وأعظم القربات
           </motion.p>
         </div>
-        <motion.p
-          variants={fadeIn("up", 0.7)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="text-lg lg:text-4xl"
-        >
-          {`موقعك الحالي: ${city}`}
-        </motion.p>
+      
       </div>
 
       <motion.div
