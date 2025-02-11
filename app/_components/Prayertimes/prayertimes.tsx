@@ -9,7 +9,7 @@ const Prayertimes = () => {
   const [prayerTimes, setPrayerTimes] = useState([]);
 
   useEffect(() => {
-    // Get user's location
+   console.log(city);
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         async (position) => {
