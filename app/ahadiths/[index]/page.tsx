@@ -15,7 +15,7 @@ type Hadith = {
 
 const Hadith = () => {
   const params = useParams();
-  const index = typeof params.index === "string" ? parseInt(params.index) : 0; // Ensure it's a number, default to 0 if undefined or an array
+  const index = parseInt(Array.isArray(params.index) ? params.index[0] : params.index || "0");
   const [ahadiths] = useState<Hadith[]>(data.ahadiths);
 
   return (
