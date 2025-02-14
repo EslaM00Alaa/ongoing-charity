@@ -3,8 +3,8 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-const bgImage = "/clapping.jpg"; // ✅ Correct reference for images in public
-const sound = "/clapping.mp3"; // ✅ Correct reference for audio files in public
+const bgImage = "/clapping.jpg";
+const sound = "/clapping.mp3";
 
 const Clapping = () => {
   const router = useRouter();
@@ -24,8 +24,16 @@ const Clapping = () => {
   }, [router]);
 
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-white">
-      <Image src={bgImage} alt="Clapping" width={500} height={500} className="max-w-full h-auto" />
+    <div className="relative w-full h-screen overflow-hidden">
+      {/* Background Image */}
+      <Image
+        src={bgImage}
+        alt="Clapping"
+        layout="fill"
+      />
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black opacity-60" />
     </div>
   );
 };
