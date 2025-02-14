@@ -27,7 +27,7 @@ const Header = () => {
   }, []);
   return (
     <header className={styles.header}>
-      <div className="w-11/12 lg:w-9/12 mx-auto flex items-center justify-between">
+      <div className="w-11/12 text-[#518676] lg:w-9/12 mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className={styles.logo}>
           <Image src={logo} alt="Logo" width={60} height={60} />
@@ -36,10 +36,13 @@ const Header = () => {
         {/* Navigation Links for Large Screens */}
         {isLarge && (
         <nav className={`${styles.navLinks} hidden lg:flex`}>
+          <Link href="/home" className={styles.navLink}>
+            الرئيسية
+          </Link>
           <Link href="/azkar" className={styles.navLink}>
             الأذكار
           </Link>
-          <Link href="/arbaeen" className={styles.navLink}>
+          <Link href="/ahadiths" className={styles.navLink}>
             الأربعين النووية
           </Link>
           <Link href="/quran" className={styles.navLink}>
@@ -57,10 +60,13 @@ const Header = () => {
       {/* Dropdown Menu for Small Screens */}
       {toggle && (
         <div className={styles.mobileMenu} >
+          <Link href="/home" className={styles.mobileLink} onClick={() => setToggle(false)}>
+          الرئيسية
+          </Link>
           <Link href="/azkar" className={styles.mobileLink} onClick={() => setToggle(false)}>
             الأذكار
           </Link>
-          <Link href="/arbaeen" className={styles.mobileLink} onClick={() => setToggle(false)}>
+          <Link href="/ahadiths" className={styles.mobileLink} onClick={() => setToggle(false)}>
             الأربعين النووية
           </Link>
           <Link href="/quran" className={styles.mobileLink} onClick={() => setToggle(false)}>

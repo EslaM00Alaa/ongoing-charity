@@ -5,6 +5,8 @@ import im2 from "../../../public/muhammad.png";
 import im3 from "../../../public/quran.png";
 import { fadeIn } from "../../variants";
 import { motion } from "framer-motion";
+import Link from "next/link";
+
 const Service = () => {
   return (
     <div className="mb-96">
@@ -34,22 +36,26 @@ const Service = () => {
         viewport={{ once: true }}
       className="my-24 w-11/12 lg:w-9/12 flex flex-col lg:flex-row justify-between items-stretch mx-auto gap-10">
         {[{
+            href:"azkar",
             image: im1,
             title: "الأذكار",
             description: "أذكار الصباح والمساء لتكون رفيقة يومك وتمنحك السكينة.",
           },
           {
+            href:"ahadiths",
             image: im2,
             title: "الأربعين النووية",
             description: "مجموعة من الأحاديث النبوية الشريفة لتستلهم منها الحكمة والنصيحة.",
           },
           {
+            href:"quran",
             image: im3,
             title: "القرآن",
             description: "نصوص القرآن الكريم لتمكنك من القراءة والاستماع والتدبر.",
           }
         ].map((service, index) => (
-          <div
+          <Link
+            href={`${service.href}`}
             key={index}
             className="bg-white w-full cursor-pointer lg:w-3/12 p-5 flex flex-col justify-center items-center rounded-xl transition-transform transform hover:scale-105 shadow-lg"
           >
@@ -58,7 +64,7 @@ const Service = () => {
             </div>
             <h4 className="text-4xl font-semibold text-gray-700 mb-4">{service.title}</h4>
             <p className="text-xl lg:text-3xl mt-2 mb-12 w-9/12 text-gray-500 text-center">{service.description}</p>
-          </div>
+          </Link>
         ))}
      
       </motion.div>
