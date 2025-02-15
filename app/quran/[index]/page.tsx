@@ -37,7 +37,7 @@ const Surah: React.FC = () => {
   useEffect(() => {
     const fetchSurah = async () => {
       try {
-        const response = await fetch(`http://api.alquran.cloud/v1/surah/${index}`);
+        const response = await fetch(`https://api.alquran.cloud/v1/surah/${index}`);
         const data = await response.json();
         setSurahData(data.data);
       } catch (error) {
