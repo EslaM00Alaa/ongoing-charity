@@ -114,7 +114,8 @@ const Page: React.FC = () => {
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ delay: surah.number * 0.02, duration: 0.8 }}
-  className="px-4 mb-8 w-10/12 mx-auto sm:w-6/12 lg:w-4/12 xl:w-3/12 "
+  className="px-4  w-10/12 mx-auto sm:w-6/12 lg:w-4/12 xl:w-3/12 "
+  style={{"marginBottom":"-30px"}}
 >
   <Link href={`/quran/${surah.number}`}>
     <div
