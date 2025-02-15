@@ -39,15 +39,16 @@ const Header = () => {
           <Link href="/home" className={styles.navLink}>
             الرئيسية
           </Link>
-          <Link href="/azkar" className={styles.navLink}>
-            الأذكار
-          </Link>
-          <Link href="/ahadiths" className={styles.navLink}>
-            الأربعين النووية
-          </Link>
           <Link href="/quran" className={styles.navLink}>
             القرآن
           </Link>
+          <Link href="/ahadiths" className={styles.navLink}>
+            الأربعين النووية
+          </Link> 
+          <Link href="/azkar" className={styles.navLink}>
+            الأذكار
+          </Link>
+          
         </nav>
          )}
 
@@ -63,14 +64,14 @@ const Header = () => {
           <Link href="/home" className={styles.mobileLink} onClick={() => setToggle(false)}>
           الرئيسية
           </Link>
-          <Link href="/azkar" className={styles.mobileLink} onClick={() => setToggle(false)}>
-            الأذكار
+          <Link href="/quran" className={styles.mobileLink} onClick={() => setToggle(false)}>
+            القرآن
           </Link>
           <Link href="/ahadiths" className={styles.mobileLink} onClick={() => setToggle(false)}>
             الأربعين النووية
           </Link>
-          <Link href="/quran" className={styles.mobileLink} onClick={() => setToggle(false)}>
-            القرآن
+          <Link href="/azkar" className={styles.mobileLink} onClick={() => setToggle(false)}>
+            الأذكار
           </Link>
         </div>
       )}

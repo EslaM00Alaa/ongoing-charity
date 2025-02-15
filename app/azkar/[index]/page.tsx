@@ -74,7 +74,7 @@ const Hadith = () => {
         animate="show"
         className="mt-8 text-center bg-opacity-70 backdrop-blur-sm"
       >
-        <div className="w-11/12 lg:w-6/12 mx-auto py-4 px-5 bg-white rounded-t-xl">
+        <div className="w-11/12 min-h-96 lg:w-6/12 mx-auto py-4 px-5 bg-white rounded-t-xl">
           <h2 className="text-2xl font-bold text-start leading-[2]">
             {Azkars[curIndex]?.content || "لا توجد أذكار متوفرة"}
           </h2>

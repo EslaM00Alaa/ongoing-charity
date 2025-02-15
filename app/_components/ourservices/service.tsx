@@ -35,11 +35,11 @@ const Service = () => {
         whileInView="show"
         viewport={{ once: true }}
       className="my-24 w-11/12 lg:w-9/12 flex flex-col lg:flex-row justify-between items-stretch mx-auto gap-10">
-        {[{
-            href:"azkar",
-            image: im1,
-            title: "الأذكار",
-            description: "أذكار الصباح والمساء لتكون رفيقة يومك وتمنحك السكينة.",
+        {[  {
+            href:"quran",
+            image: im3,
+            title: "القرآن",
+            description: "نصوص القرآن الكريم لتمكنك من القراءة والاستماع والتدبر.",
           },
           {
             href:"ahadiths",
@@ -48,10 +48,10 @@ const Service = () => {
             description: "مجموعة من الأحاديث النبوية الشريفة لتستلهم منها الحكمة والنصيحة.",
           },
           {
-            href:"quran",
-            image: im3,
-            title: "القرآن",
-            description: "نصوص القرآن الكريم لتمكنك من القراءة والاستماع والتدبر.",
+            href:"azkar",
+            image: im1,
+            title: "الأذكار",
+            description: "أذكار الصباح والمساء لتكون رفيقة يومك وتمنحك السكينة.",
           }
         ].map((service, index) => (
           <Link

@@ -15,64 +15,71 @@ interface PrayerTimes {
 
 const Prayertimes: React.FC = () => {
   const [city, setCity] = useState<string>("جاري تحديد الموقع...");
-  const [prayerTimes, setPrayerTimes] = useState<PrayerTimes | null>(null);
+const [prayerTimes, setPrayerTimes] = useState<PrayerTimes | null>(null);
 
-  useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        async (position) => {
-          const { latitude, longitude } = position.coords;
-          try {
-            const cityName = await getCityFromCoordinates(latitude, longitude);
-            setCity(cityName);
-            fetchPrayerTimes(cityName);
-          } catch (error) {
-            setCity("تعذر تحديد الموقع");
-          }
-        },
-        () => setCity("تعذر تحديد الموقع")
-      );
-    } else {
-      setCity("ميزة تحديد الموقع غير مدعومة");
-    }
-  }, []);
-
-  const getCityFromCoordinates = async (lat: number, lon: number): Promise<string> => {
-    try {
-      const response = await fetch(
-        `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`
-      );
-      const data = await response.json();
-      return data.address.city || data.address.town || "مدينة غير معروفة";
-    } catch {
-      return "مدينة غير معروفة";
-    }
-  };
-
-  const fetchPrayerTimes = async (cityName: string) => {
-    try {
-      const response = await fetch(
-        `https://api.aladhan.com/v1/timingsByCity?city=${cityName}&country=Egypt&method=5`
-      );
-      const data = await response.json();
-      if (data.data && data.data.timings) {
-        setPrayerTimes(data.data.timings);
+useEffect(() => {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+        try {
+          const cityName = await getCityFromCoordinates(latitude, longitude);
+          setCity(cityName);
+          fetchPrayerTimes(cityName);
+        } catch (error) {
+          setCity("المنيا");
+          fetchPrayerTimes("المنيا");
+        }
+      },
+      () => {
+        setCity("المنيا");
+        fetchPrayerTimes("المنيا");
       }
-    } catch {
-      console.error("Failed to fetch prayer times.");
-    }
-  };
+    );
+  } else {
+    setCity("المنيا");
+    fetchPrayerTimes("المنيا");
+  }
+}, []);
 
-  const translatePrayer = (prayer: string): string => {
-    const translations: Record<string, string> = {
-      Fajr: "الفجر",
-      Dhuhr: "الظهر",
-      Asr: "العصر",
-      Maghrib: "المغرب",
-      Isha: "العشاء",
-    };
-    return translations[prayer] || prayer;
+const getCityFromCoordinates = async (lat: number, lon: number): Promise<string> => {
+  try {
+    const response = await fetch(
+      `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`
+    );
+    const data = await response.json();
+    return data.address.city || data.address.town || "مدينة غير معروفة";
+  } catch {
+    return "مدينة غير معروفة";
+  }
+};
+
+const fetchPrayerTimes = async (cityName: string) => {
+  try {
+    const response = await fetch(
+      `https://api.aladhan.com/v1/timingsByCity?city=${cityName}&country=Egypt&method=5`
+    );
+    const data = await response.json();
+    if (data.data && data.data.timings) {
+      setPrayerTimes(data.data.timings);
+    }
+  } catch {
+    console.error("Failed to fetch prayer times.");
+  }
+};
+
+const translatePrayer = (prayer: string): string => {
+  const translations: Record<string, string> = {
+    Fajr: "الفجر",
+    Dhuhr: "الظهر",
+    Asr: "العصر",
+    Maghrib: "المغرب",
+    Isha: "العشاء",
   };
+  return translations[prayer] || prayer;
+};
+
+
 
   return (
     <div className="relative h-screen lg:h-[calc(100vh-310px)]">
