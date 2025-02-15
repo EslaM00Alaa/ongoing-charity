@@ -21,7 +21,7 @@ const Home: React.FC = () => {
     <div className="relative h-screen">
       <Image
         src={cover}
-        alt="صدقة جارية عن روح المرحوم محمد صلاح بكر"
+        alt="صدقة جارية عن روح المرحوم محمد صلاح ابراهيم بكر"
         layout="fill"
         objectFit="cover"
         className="opacity-70"
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
               animate="show"
               className="text-2xl md:text-7xl font-bold mb-6 md:mb-12 leading-[1.6]"
             >
-              صدقة جارية عن روح المرحوم محمد صلاح بكر
+              صدقة جارية عن روح المرحوم <br></br>محمد صالح ابراهيم بكر
             </motion.h1>
             <motion.p
               variants={fadeIn("up", 0.6)}

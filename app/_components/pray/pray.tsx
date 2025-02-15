@@ -26,7 +26,7 @@ const Pray = () => {
           whileInView="show"
           viewport={{ once: true }}
           className='text-3xl lg:text-5xl font-bold mb-4 text-gray-900'>
-            دعاء للمرحوم محمد صلاح بكر
+            دعاء للمرحوم <br></br> محمد صالح ابراهيم بكر  
           </motion.h2>
           {[  
                 "اللهم اغفر له وارحمه، وعافه واعف عنه، وأكرم نزله ووسع مدخله.",  
