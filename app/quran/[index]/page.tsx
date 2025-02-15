@@ -101,13 +101,13 @@ const Surah: React.FC = () => {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
-                  minHeight: "450px",
+                  minHeight: "500px",
                   padding: "20px",
                   borderRadius: "12px",
                 }}
               >
                 {ayahGroup.map((ayah, idx) => (
-                  <h2 key={idx} className="text-xl lg:text-4xl w-9/12 lg:w-7/12 mx-auto font-bold leading-[2] lg:leading-[3]">
+                  <h2 key={idx} className="text-xl first:pt-8 lg:text-4xl w-9/12 lg:w-7/12 mx-auto font-bold leading-[2] lg:leading-[3]">
                     {ayah.text} <span className="text-lg">({ayah.number})</span>
                   </h2>
                 ))}
