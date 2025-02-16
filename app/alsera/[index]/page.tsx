@@ -42,10 +42,10 @@ const Page: React.FC = () => {
 
       {/* فيديو في الوسط */}
       <div className="flex flex-col justify-center items-center w-full flex-1">
-        <motion.div variants={fadeIn("up", 0.3)} initial="hidden" animate="show" className="w-full sm:w-11/12 lg:w-7/12">
+        <motion.div variants={fadeIn("up", 0.3)} initial="hidden" animate="show" className="w-full  sm:w-11/12 lg:w-7/12">
           <div className="relative w-full aspect-video">
             <iframe
-              className="w-full h-full rounded-lg shadow-lg"
+              className="w-full min-h-96 h-full rounded-lg shadow-lg"
               src={currentVideo.url}
               title={currentVideo.name}
               allowFullScreen
