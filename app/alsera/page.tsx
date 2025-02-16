@@ -75,7 +75,7 @@ const Page: React.FC = () => {
             >
               <Link href={`/alsera/${index}`}>
                 <div className="bg-white shadow-lg min-h-36 text-start rounded-xl p-6  hover:bg-gray-100 transition duration-300">
-                  <h3 className="text-2xl font-bold text-[#518676]">{lesson.name}</h3>
+                  <h3 className="text-xl lg:text-2xl font-bold text-[#518676]">{lesson.name}</h3>
                 </div>
               </Link>
             </motion.div>

@@ -57,7 +57,7 @@ const Page: React.FC = () => {
         <div className="flex justify-between w-full sm:w-11/12 lg:w-7/12 mt-4">
           <button
             className={`px-6 py-3 rounded-lg font-bold ${
-              currentIndex === 0 ? "bg-gray-300 cursor-not-allowed" : "bg-[#518676] text-white hover:bg-green-700"
+              currentIndex === 0 ? "bg-gray-300 cursor-not-allowed" : "bg-[#518676] text-white "
             }`}
             disabled={currentIndex === 0}
             onClick={() => router.push(`/alsera/${currentIndex - 1}`)}
@@ -67,7 +67,7 @@ const Page: React.FC = () => {
 
           <button
             className={`px-6 py-3 rounded-lg font-bold ${
-              currentIndex === data.length - 1 ? "bg-gray-300 cursor-not-allowed" : "bg-[#518676] text-white hover:bg-green-700"
+              currentIndex === data.length - 1 ? "bg-gray-300 cursor-not-allowed" : "bg-[#518676] text-white "
             }`}
             disabled={currentIndex === data.length - 1}
             onClick={() => router.push(`/alsera/${currentIndex + 1}`)}
