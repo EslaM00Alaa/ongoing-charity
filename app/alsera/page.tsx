@@ -71,7 +71,7 @@ const Page: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05, duration: 0.5 }}
-              className="p-4 w-10/12 sm:w-8/12 lg:w-5/12 xl:w-4/12"
+              className="p-4 w-11/12  sm:w-8/12 lg:w-5/12 xl:w-4/12"
             >
               <Link href={`/alsera/${index}`}>
                 <div className="bg-white shadow-lg min-h-36 text-start rounded-xl p-6  hover:bg-gray-100 transition duration-300">
