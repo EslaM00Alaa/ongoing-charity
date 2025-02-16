@@ -42,6 +42,9 @@ const Header = () => {
           <Link href="/quran" className={styles.navLink}>
             القرآن
           </Link>
+          <Link href="/alsera" className={styles.navLink}>
+          السيرة النبوية
+          </Link>
           <Link href="/ahadiths" className={styles.navLink}>
             الأربعين النووية
           </Link> 
@@ -66,6 +69,9 @@ const Header = () => {
           </Link>
           <Link href="/quran" className={styles.mobileLink} onClick={() => setToggle(false)}>
             القرآن
+          </Link>
+          <Link href="/alsera" className={styles.mobileLink} onClick={() => setToggle(false)}>
+          السيرة النبوية
           </Link>
           <Link href="/ahadiths" className={styles.mobileLink} onClick={() => setToggle(false)}>
             الأربعين النووية

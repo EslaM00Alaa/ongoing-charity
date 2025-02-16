@@ -67,6 +67,17 @@ const fetchPrayerTimes = async (cityName: string) => {
     console.error("Failed to fetch prayer times.");
   }
 };
+const convertTo12HourFormat = (time: string): string => {
+  const [hour, minute] = time.split(":").map(Number);
+  const suffix = hour < 12 ? "ص" : "م";
+  const formattedHour = hour % 12 === 0 ? 12 : hour % 12;
+
+  // Convert numbers to Arabic numerals
+  const toArabicNumbers = (num: number) => num.toString().replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[+d]);
+
+  return `${toArabicNumbers(formattedHour)}:${toArabicNumbers(minute)} ${suffix}`;
+};
+
 
 const translatePrayer = (prayer: string): string => {
   const translations: Record<string, string> = {
@@ -127,9 +138,10 @@ const translatePrayer = (prayer: string): string => {
               className="bg-gray-300/30 text-white p-4 text-center rounded-lg shadow-lg"
             >
               <h2 className="text-xl font-bold mb-1">{`صلاة ${translatePrayer(prayer)}`}</h2>
-              <span className="text-2xl">
-                {prayerTimes ? prayerTimes[prayer as keyof PrayerTimes] : "جاري التحميل..."}
+              <span className="text-2xl" style={{"direction":"rtl"}} >
+              {prayerTimes ? convertTo12HourFormat(prayerTimes[prayer as keyof PrayerTimes]) : "جاري التحميل..."}
               </span>
+
             </div>
           ))}
         </div>

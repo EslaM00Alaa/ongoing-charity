@@ -3,6 +3,7 @@ import Image from "next/image";
 import im1 from "../../../public/islamic.png";
 import im2 from "../../../public/muhammad.png";
 import im3 from "../../../public/quran.png";
+import im4 from "../../../public/ahadith.png";
 import { fadeIn } from "../../variants";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -42,8 +43,14 @@ const Service = () => {
             description: "نصوص القرآن الكريم لتمكنك من القراءة والاستماع والتدبر.",
           },
           {
-            href:"ahadiths",
+            href: "alsera",
             image: im2,
+            title: "السيرة النبوية",
+            description: "سيرة النبي محمد ﷺ من مولده إلى وفاته، تتضمن الأحداث والمواقف التي شكلت الإسلام.",
+          },          
+          {
+            href:"ahadiths",
+            image: im4,
             title: "الأربعين النووية",
             description: "مجموعة من الأحاديث النبوية الشريفة لتستلهم منها الحكمة والنصيحة.",
           },
