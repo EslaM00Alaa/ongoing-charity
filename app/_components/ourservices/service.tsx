@@ -61,7 +61,15 @@ const Service = () => {
               image: im3,
               title: "القرآن",
               description: "نصوص القرآن الكريم لتمكنك من القراءة والاستماع والتدبر.",
-            },
+            }
+            ,
+            {
+              href: "azkar",
+              image: im1,
+              title: "الأذكار",
+              description: "أذكار الصباح والمساء لتكون رفيقة يومك وتمنحك السكينة.",
+            }
+            ,
             {
               href: "alsera",
               image: im2,
@@ -73,12 +81,6 @@ const Service = () => {
               image: im4,
               title: "الأربعين النووية",
               description: "مجموعة من الأحاديث النبوية الشريفة لتستلهم منها الحكمة والنصيحة.",
-            },
-            {
-              href: "azkar",
-              image: im1,
-              title: "الأذكار",
-              description: "أذكار الصباح والمساء لتكون رفيقة يومك وتمنحك السكينة.",
             }
           ].map((service, index) => (
             <Link
