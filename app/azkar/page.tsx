@@ -7,6 +7,11 @@ import { fadeIn } from "../variants";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+
+
+
+
+
 // Define a type for the azkar item
 type AzkarItem = {
   category: string;

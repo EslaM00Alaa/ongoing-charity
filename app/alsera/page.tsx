@@ -7,6 +7,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import data from "../../data/alsera.json"; // استيراد بيانات السيرة النبوية
 
+
+
+
 type Lesson = {
   name: string;
   url: string;

@@ -7,6 +7,8 @@ import { fadeIn } from "../variants";
 import { motion } from "framer-motion";
 import Link from 'next/link';
 
+
+
 // Define the type for each hadith object
 type Hadith = {
   name: string;

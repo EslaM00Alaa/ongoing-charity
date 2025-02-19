@@ -8,12 +8,14 @@ import Link from "next/link";
 
 import bgImage from "../../public/bg223.png"
 
+
 // دالة لإزالة التشكيل من النصوص العربية
 const removeDiacritics = (text: string): string => {
   return text
     .normalize("NFKD") // تطبيع النص
     .replace(/[\u064B-\u0652]/g, ""); // إزالة التشكيل
 };
+
 
 // تعريف نوع بيانات السورة
 type Surah = {
