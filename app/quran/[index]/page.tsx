@@ -25,7 +25,7 @@ interface SurahData {
 const Surah: React.FC = () => {
   const params = useParams();
   const [surahData, setSurahData] = useState<SurahData | null>(null);
-  
+
   // المتغير الذي يحدد عدد الأحرف لكل بطاقة
   const maxCharsPerCard = 370;
 
@@ -40,12 +40,14 @@ const Surah: React.FC = () => {
         const response = await fetch(`https://api.alquran.cloud/v1/surah/${index}`);
         const data = await response.json();
         setSurahData(data.data);
+        console.log("surahData",data.data)
       } catch (error) {
         console.error("Error fetching Surah data:", error);
       }
     };
 
     fetchSurah();
+
   }, [index]);
 
   // تقسيم الآيات حسب عدد الأحرف لكل بطاقة
@@ -108,7 +110,7 @@ const Surah: React.FC = () => {
               >
                 {ayahGroup.map((ayah, idx) => (
                   <h2 key={idx} className="text-xl first:pt-8 lg:text-4xl w-9/12 lg:w-7/12 mx-auto font-bold leading-[2] lg:leading-[3]">
-                    {ayah.text} <span className="text-lg">({ayah.number})</span>
+                    {ayah.text} <span className="text-lg">({ayah.numberInSurah})</span>
                   </h2>
                 ))}
               </div>
