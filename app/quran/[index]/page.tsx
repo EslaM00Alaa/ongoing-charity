@@ -13,6 +13,7 @@ import { fadeIn } from "../../variants";
 // Define Surah and Ayah types
 interface Ayah {
   number: number;
+  numberInSurah: number;
   text: string;
 }
 
